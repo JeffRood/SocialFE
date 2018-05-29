@@ -1,0 +1,34 @@
+<div class="body2">
+    <div class="col-lg-4 data">
+        <h1 class="fuerte">{{title}}</h1>
+
+
+
+        <div class="alert alert-success" *ngIf=" status == 'success'">
+            Bienvenido
+
+        </div>
+
+        <div class="alert alert-danger " *ngIf=" status == 'error'">
+            El usuario o la contraseña es incorrecta
+        </div>
+
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-9 log">
+            <p>
+                <label> Email</label>
+                <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required>
+                <span *ngIf="!email.valid && email.touched"> El email no es valido </span>
+            </p>
+
+            <p>
+                <label> Contraseña</label>
+                <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control" required>
+                <span *ngIf="!password.valid && password.touched"> La contraseña es obligatoria </span>
+            </p>
+            <input type="submit" value="Entrar" class="btn btn-primary" [disabled]="!loginForm.form.valid">
+
+        </form>
+        <br>
+    </div>
+
+</div>

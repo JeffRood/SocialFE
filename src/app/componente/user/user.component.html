@@ -1,0 +1,65 @@
+<div class="container col-lg-6">
+    <h1 class="fuerte">{{title}}</h1>
+    <br> </div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="people ">
+
+
+            <div *ngFor="let user of users" class="people  ">
+                <table class="table-responsive  table ">
+
+
+                    <tbody>
+                        <tr>
+                            <p *ngIf="user.image">
+                                <th scope="row"><img class=" image4 " src="{{url + 'get-image-user/' + user.image }}"></th>
+                            </p>
+                            <p *ngIf="!user.image">
+                                <th scope="row"><img class=" image4 " src="../../../assets//images/avatar.jpg"></th>
+                            </p>
+                            <th>
+                                {{user.name + ' ' + user.surname}}
+                                <br>
+                                <p class="nick">{{user.nick}} </p>
+                            </th>
+                            <!-- Seguir y dejar de seguir -->
+
+                            <p *ngIf="user._id !== identity._id">
+                                <th>
+                                    <button *ngIf="follows.indexOf(user._id) < 0" type="button" class="btn btn-success" (click)="followUser(user._id)"> <i class="fa fa-plus"></i> Seguir</button>
+                                    <button *ngIf="follows.indexOf(user._id) >= 0" type="button" class="btn btn-primary" (mouseenter)="mouseEnter(user._id)" (mouseleave)="mouseLeave(user._id)" [class.btn-danger]="user._id == followUserOver">
+                            <span *ngIf="user._id == followUserOver; else following " (click)="unFollowUser(user._id)">
+                           <i class="fa fa-times" ></i> Dejar de seguir
+                          </span>
+                          <ng-template #following> <i class="fa fa-check"></i> Siguiendo
+                            </ng-template>
+                          </button>
+                                </th>
+                            </p>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+                <br>
+
+
+            </div>
+
+            <ul class="pagination center2">
+                <li *ngIf="page > 1 ">
+                    <button class="btn btn-success" [routerLink]="['/gente', prev_page]"> Anterior</button>
+                </li>
+                <br>
+                <li *ngIf="pages != page ">
+                    <button class="btn btn-success" [routerLink]="['/gente', next_page]"> Siguiente</button>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="col-md-4">
+        <app-sidebar></app-sidebar>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+    /* You can add global styles to this file, and also import other style files */
+    /* GENERALES */
+    
+    .fuerte {
+        font-size: 35px;
+        font-weight: bold;
+        margin-left: 13px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee
+    }
+    
+    .routas {
+        opacity: 1;
+    }
+    
+    .menu {
+        margin-left: auto;
+    }
+    
+    .body2 {
+        background-image: url(images/fondo.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        contain: content;
+        width: auto;
+        height: 850px;
+    }
+    
+    .data {
+        background-color: white;
+        text-align: center;
+        opacity: 0.91;
+        margin: auto;
+        margin-top: 70px;
+        border-radius: 30px;
+    }
+    
+    .log {
+        margin: auto;
+    }
+    
+    .jumbotron {
+        margin-top: 10px;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+    }
+    
+    .navbar .dropdown-menu {
+        right: 0;
+        left: auto;
+    }
+    
+    .pointer {
+        cursor: pointer;
+    }
+    
+    .redondo {
+        border-radius: 100px;
+    }
+    
+    .avatar {
+        border-radius: 100px;
+        width: 35px;
+        height: 40px;
+    }
+    
+    .jeff {
+        background-color: transparent;
+    }
+    
+    .image4 {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+    }
+    
+    .people {
+        margin-left: 150px;
+        ;
+    }
+    
+    .user2 {
+        /* width: 120px; */
+        height: 40px;
+    }
+    
+    .nick {
+        color: rgb(119, 119, 119);
+    }
+    
+    .center2 {
+        margin-left: 600px;
+    }
+    
+    .imagengente {
+        margin-right: 50px;
+    }
+    /* Sidebar */
